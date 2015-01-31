@@ -1,0 +1,36 @@
+true
+---
+This is a simple list of mutable joint states
+---
+true
+---
+each line has the form
+---
+true
+---
+"joint_name: <double_value>"
+---
+Basler1_pitch_joint: -1.43677474735494
+Basler1_roll_joint: 3.1263963435261
+Basler1_x_joint: 1.17148734954122
+Basler1_y_joint: 2.46357148790454
+Basler1_yaw_joint: -1.54397149594806
+Basler1_z_joint: -4.44979607479663
+Basler2_pitch_joint: -1.43567000514306
+Basler2_roll_joint: 3.11768851724247
+Basler2_x_joint: 1.29908162589728
+Basler2_y_joint: 2.46581144211634
+Basler2_yaw_joint: -1.54514672580388
+Basler2_z_joint: -4.45306947300919
+asus1_link_pitch_joint: -0.0304901518621128
+asus1_link_roll_joint: 0.0170987523518393
+asus1_link_x_joint: 0.538833578280343
+asus1_link_y_joint: -0.873160143711583
+asus1_link_yaw_joint: -0.0485719453143231
+asus1_link_z_joint: 1.05476254574526
+asus2_link_pitch_joint: -0.0647339361719509
+asus2_link_roll_joint: 0.103233832714948
+asus2_link_x_joint: 0.845766841886051
+asus2_link_y_joint: 1.06731653166343
+asus2_link_yaw_joint: -0.227804673274835
+asus2_link_z_joint: 1.11608213215486

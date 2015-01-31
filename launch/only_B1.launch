@@ -1,0 +1,7 @@
+<launch>
+	<include file="$(find nist_cal)/launch/single_camera.launch" >
+          <arg name="camera_number" value="1"/>
+	  <arg name="camera_id" value="21499591"/>
+        </include>
+
+</launch>
