@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <launch>
 
-     <!--include file="$(find nist_cal)/launch/nist_cameras.launch" >
+     <include file="$(find nist_cal)/launch/nist_cameras.launch" >
           <arg name="view_cameras" value="true"/>
-     </include-->
+     </include>
      <!--include file="$(find nist_cal)/launch/single_camera.launch" >
           <arg name="camera_number" value="1"/>
           <arg name="camera_id" value="21499591"/>

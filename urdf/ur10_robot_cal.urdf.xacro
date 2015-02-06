@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="ur10" >
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find ur_description)/urdf/gazebo.urdf.xacro" />
+
+  <!-- ur10 -->
+  <xacro:include filename="$(find ur_description)/urdf/ur10.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:ur10_robot prefix="" joint_limited="true"/>
+
+  <!-- camera -->
+  <xacro:include filename="$(find industrial_extrinsic_cal)/urdf/basler_cal_macro.xacro"/>
+
+
+  <link name="world" />
+  <link name="table_link">
+      <visual>
+        <geometry>
+           <box size="1.960 1.960 0.95"/>
+        </geometry>
+        <material name="red1">
+          <color rgba="0.3 0.3 0.3"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="1.960 1.960 0.95"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <link name="post1_link">
+      <visual>
+        <geometry>
+           <box size="0.075 0.075 1.08"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.075 0.075 1.08"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <link name="post2_link">
+      <visual>
+        <geometry>
+           <box size="0.075 0.075 1.08"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.075 0.075 1.08"/>
+        </geometry>
+      </collision>
+  </link>
+  <link name="post3_link">
+      <visual>
+        <geometry>
+           <box size="0.075 0.075 1.08"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.075 0.075 1.08"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <link name="post4_link">
+      <visual>
+        <geometry>
+           <box size="0.075 0.075 1.08"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.075 0.075 1.08"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <link name="post5_link">
+      <visual>
+        <geometry>
+           <box size="0.04 0.075 0.5"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.04 0.075 0.5"/>
+        </geometry>
+      </collision>
+  </link>
+  <link name="strain_link">
+      <visual>
+        <geometry>
+           <box size="0.35 0.08 0.08"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.35 0.08 0.08"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <link name="cross1_link">
+      <visual>
+        <geometry>
+           <box size="2.59 0.03 0.03"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="2.59 0.03 0.03"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <link name="cross2_link">
+      <visual>
+        <geometry>
+           <box size="0.03 2.59 0.03"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.03 2.59 0.03"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <link name="stereo_bar_link">
+      <visual>
+        <geometry>
+           <box size="0.4 .03 0.03"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.4 .03 0.03"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <link name="display_link">
+      <visual>
+        <geometry>
+           <box size="0.5 0.5 0.35"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.5 0.5 0.35"/>
+        </geometry>
+      </collision>
+  </link>
+
+  <joint name="table_joint" type="fixed">
+    <parent link="world" />
+    <child link = "table_link" />
+    <origin xyz="0.0 0.03 -0.475" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="post1_joint" type="fixed">
+    <parent link="table_link" />
+    <child link = "post1_link" />
+    <origin xyz="0.9425 0.9425 1.015" rpy="0.0 0.0 0.0" />
+  </joint>
+  <joint name="post2_joint" type="fixed">
+    <parent link="table_link" />
+    <child link = "post2_link" />
+    <origin xyz="-0.9425 0.9425 1.015" rpy="0.0 0.0 0.0" />
+  </joint>
+  <joint name="post3_joint" type="fixed">
+    <parent link="table_link" />
+    <child link = "post3_link" />
+    <origin xyz="-0.9425 -0.9425 1.015" rpy="0.0 0.0 0.0" />
+  </joint>
+  <joint name="post4_joint" type="fixed">
+    <parent link="table_link" />
+    <child link = "post4_link" />
+    <origin xyz="0.9425 -0.9425 1.015" rpy="0.0 0.0 0.0" />
+  </joint>
+  <joint name="post5_joint" type="fixed">
+    <parent link="table_link" />
+    <child link = "post5_link" />
+    <origin xyz="0.26 -0.9025  0.725" rpy="0.0 0.0 0.0" />
+  </joint>
+  <joint name="strain_joint" type="fixed">
+    <parent link="post5_link" />
+    <child link = "strain_link" />
+    <origin xyz="-0.175 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <joint name="cross1_joint" type="fixed">
+    <parent link="table_link" />
+    <child link = "cross1_link" />
+    <origin xyz="0.0 0.0 2.065" rpy="0.0 0.0 0.0" />
+  </joint>
+  <joint name="cross2_joint" type="fixed">
+    <parent link="table_link" />
+    <child link = "cross2_link" />
+    <origin xyz="0.0 0.0 2.065" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="stereo_bar_joint" type="fixed">
+    <parent link="basler5_optical_frame" />
+    <child link = "stereo_bar_link" />
+    <origin xyz="0.12 0.04 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="display_joint" type="fixed">
+    <parent link="post2_link" />
+    <child link = "display_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+	
+  <link name="cal_target_link1"/>
+
+  <link name="cal_target_link2"/>
+
+  <link name="cal_target_link3" >
+      <visual>
+        <geometry>
+           <box size="0.3 0.27 0.002"/>
+        </geometry>
+        <material name="grey">
+          <color rgba="1.0 1.0 1.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+           <box size="0.3 0.27 0.02"/>
+        </geometry>
+      </collision>
+    </link>
+
+   <link name ="cal_grid"/>
+
+  <joint name="ee2target1" type="fixed">
+    <parent link="ee_link" />
+    <child link = "cal_target_link1" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 1.5708 0.0" />
+  </joint>
+
+  <joint name="target1to2" type="fixed">
+    <parent link="cal_target_link1" />
+    <child link = "cal_target_link2" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -2.3562" />
+  </joint>
+
+  <joint name="target2to3" type="fixed">
+    <parent link="cal_target_link2" />
+    <child link = "cal_target_link3" />
+    <origin xyz="-0.115 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="targetToGrid" type="fixed">
+    <parent link="cal_target_link2" />
+    <child link = "cal_grid" />
+    <origin xyz="-0.0696 0.06985 0.0" rpy="3.1415 0.0 -1.5708" />
+  </joint>
+
+ 
+  <!-- baslers -->
+  <xacro:basler_sensor_definitions prefix="basler1" parent_link="world" />
+  <xacro:basler_sensor_definitions prefix="basler2" parent_link="world" />
+  <xacro:basler_sensor_definitions prefix="basler3" parent_link="world" />
+  <xacro:basler_sensor_definitions prefix="basler4" parent_link="world" />
+  <xacro:basler_sensor_definitions prefix="basler5" parent_link="world" />
+  <xacro:basler_sensor_definitions prefix="basler6" parent_link="world" />
+  <xacro:basler_sensor_definitions prefix="basler7" parent_link="world" />
+
+</robot>

@@ -14,10 +14,10 @@ static_cameras:
     position_z: 0.0
     transform_interface: ros_camera_scti
     parent_frame: world_frame
-    focal_length_x: 2949.16850347433
-    focal_length_y: 2961.56133515886
-    center_x: 676.86067966612
-    center_y: 355.02315921504
+    focal_length_x: 2890.9
+    focal_length_y: 2881.9
+    center_x: 996.08
+    center_y: 579.18
     distortion_k1: 0.00
     distortion_k2: 0.00
     distortion_k3: 0.00
@@ -80,10 +80,10 @@ static_cameras:
     position_z: 0.0
     transform_interface: ros_camera_scti
     parent_frame: world_frame
-    focal_length_x: 890.1
-    focal_length_y: 896.2
-    center_x: 1031
-    center_y: 533.6
+    focal_length_x: 2890.9
+    focal_length_y: 2881.9
+    center_x: 996.08
+    center_y: 579.18
     distortion_k1: 0.00
     distortion_k2: 0.00
     distortion_k3: 0.00
@@ -124,10 +124,10 @@ static_cameras:
     position_z: 0.0
     transform_interface: ros_camera_scti
     parent_frame: world_frame
-    focal_length_x: 877.7
-    focal_length_y: 884.2
-    center_x: 1027.5
-    center_y: 562.6
+    focal_length_x: 2890.9
+    focal_length_y: 2881.9
+    center_x: 996.08
+    center_y: 579.18
     distortion_k1: 0.00
     distortion_k2: 0.00
     distortion_k3: 0.00
@@ -168,8 +168,52 @@ static_cameras:
     position_z: 0.0
     transform_interface: ros_camera_scti
     parent_frame: world_frame
-    focal_length_x: 2909.0
-    focal_length_y: 2909.0
+    focal_length_x: 2890.9
+    focal_length_y: 2881.9
+    center_x: 996.08
+    center_y: 579.18
+    distortion_k1: 0.00
+    distortion_k2: 0.00
+    distortion_k3: 0.00
+    distortion_p1: 0.00
+    distortion_p2: 0.00
+ -
+    camera_name: basler8
+    camera_optical_frame: basler8
+    trigger: NO_WAIT_TRIGGER
+    image_topic: /Basler8/image_rect
+    angle_axis_ax: 0.0
+    angle_axis_ay: 0.0
+    angle_axis_az: 0.0
+    position_x: 0.0
+    position_y: 0.0
+    position_z: 0.0
+    transform_interface: ros_camera_scti
+    parent_frame: world_frame
+    focal_length_x: 2890.9
+    focal_length_y: 2881.9
+    center_x: 996.08
+    center_y: 579.18
+    distortion_k1: 0.00
+    distortion_k2: 0.00
+    distortion_k3: 0.00
+    distortion_p1: 0.00
+    distortion_p2: 0.00
+ -
+    camera_name: basler9
+    camera_optical_frame: basler9
+    trigger: NO_WAIT_TRIGGER
+    image_topic: /Basler9/image_rect
+    angle_axis_ax: 0.0
+    angle_axis_ay: 0.0
+    angle_axis_az: 0.0
+    position_x: 0.0
+    position_y: 0.0
+    position_z: 0.0
+    transform_interface: ros_camera_scti
+    parent_frame: world_frame
+    focal_length_x: 2890.9
+    focal_length_y: 2881.9
     center_x: 996.08
     center_y: 579.18
     distortion_k1: 0.00
