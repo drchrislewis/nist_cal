@@ -3,7 +3,7 @@ field_results;
 frows = 2/0.1+1;
 fcols = 2/0.1+1;
 z = [];
-zmax=1.0;
+zmax=0.0005;
 for i=1:fcols, for j=1:frows,fi=(i-1)*frows+j; ex=f(fi,7);ey=f(fi,8);ez=f(fi,9);z(j,i) = sqrt(ex*ex+ey*ey+ez*ez); end; end;
 for i=1:fcols, for j=1:frows,fi=(i-1)*frows+j; if (z(j,i)>zmax), z(j,i) = zmax; endif; end; end;
 y = -1:0.1:1.0;

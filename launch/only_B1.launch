@@ -1,10 +1,12 @@
 <launch>
-       <arg name="view_cameras" default="true"/>
+       <arg name="view_cameras" default="false"/>
+       <arg name="camera_number" default="1"/>
        <include file="$(find nist_cal)/launch/single_camera.launch" >
-          <arg name="camera_number" value="1"/>
+          <arg name="camera_number" value="$(arg camera_number)"/>
 	  <arg name="camera_id" value="21503281"/>
 	  <arg name="view_cameras" value="$(arg view_cameras)"/>
                  <arg name="acquisition_rate" value="20"/>
+                 <arg name="exposure_time" value="500"/>
         </include>
 
 </launch>

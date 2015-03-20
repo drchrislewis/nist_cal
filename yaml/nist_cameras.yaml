@@ -58,10 +58,10 @@ static_cameras:
     position_z: 0.0
     transform_interface: ros_camera_scti
     parent_frame: world_frame
-    focal_length_x: 2890.9
-    focal_length_y: 2881.9
-    center_x: 996.08
-    center_y: 579.18
+    focal_length_x: 2344.7
+    focal_length_y: 2330.6
+    center_x: 697.2
+    center_y: 404.3
     distortion_k1: 0.00
     distortion_k2: 0.00
     distortion_k3: 0.00

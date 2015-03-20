@@ -5,6 +5,7 @@
 	  <arg name="camera_id" value="21565453"/>
 	  <arg name="view_cameras" value="$(arg view_cameras)"/>
                  <arg name="acquisition_rate" value="20"/>
+                 <arg name="exposure_time" value="40000"/>
         </include>
 
 </launch>

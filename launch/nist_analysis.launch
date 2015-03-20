@@ -3,7 +3,7 @@
 
      <!-- launch the mutable joint state publisher -->
       <node name="mutable_joint_state_publisher" pkg="industrial_extrinsic_cal" type="mutable_joint_state_publisher" output="screen">
-                 <param name="mutableJointStateYamlFile" value="$(find nist_cal)/yaml/nist_mutable_joint_states.yamlnew" />
+                 <param name="mutable_joint_state_yaml_file" value="$(find nist_cal)/yaml/nist_mutable_joint_states.yamlnew" />
                  <remap from="joint_states" to="/mutable_joint_states"/>
        </node>
 
