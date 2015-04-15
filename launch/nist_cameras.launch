@@ -4,43 +4,50 @@
      <include file="$(find nist_cal)/launch/single_camera.launch" >
           <arg name="camera_number" value="1"/>
 	  <arg name="camera_id" value="21503281"/>
-	  <arg name="view_camera" value="$(arg view_camera)"/>
+	  <arg name="view_cameras" value="$(arg view_cameras)"/>
+                 <arg name="exposure_time" value="1000"/>
      </include>
 
      <!--include file="$(find nist_cal)/launch/single_camera.launch" >
           <arg name="camera_number" value="2"/>
 	  <arg name="camera_id" value="21565452"/>
-	  <arg name="view_camera" value="$(arg view_camera)"/>
+	  <arg name="view_cameras" value="$(arg view_cameras)"/>
+                 <arg name="exposure_time" value="5000"/>
      </include-->
 
      <include file="$(find nist_cal)/launch/single_camera.launch" >
           <arg name="camera_number" value="3"/>
 	  <arg name="camera_id" value="21565453"/>
-	  <arg name="view_camera" value="$(arg view_camera)"/>
+	  <arg name="view_cameras" value="$(arg view_cameras)"/>
+                 <arg name="exposure_time" value="10000"/>
      </include>
 
      <include file="$(find nist_cal)/launch/single_camera.launch" >
           <arg name="camera_number" value="4"/>
 	  <arg name="camera_id" value="21280021"/>
-	  <arg name="view_camera" value="$(arg view_camera)"/>
+	  <arg name="view_cameras" value="$(arg view_cameras)"/>
+                 <arg name="exposure_time" value="10000"/>
      </include>
 
      <include file="$(find nist_cal)/launch/single_camera.launch" >
           <arg name="camera_number" value="5"/>
 	  <arg name="camera_id" value="21280024"/>
-	  <arg name="view_camera" value="$(arg view_camera)"/>
+	  <arg name="view_cameras" value="$(arg view_cameras)"/>
+                 <arg name="exposure_time" value="10000"/>
      </include>
 
      <include file="$(find nist_cal)/launch/single_camera.launch" >
           <arg name="camera_number" value="6"/>
 	  <arg name="camera_id" value="21368316"/>
-	  <arg name="view_camera" value="$(arg view_camera)"/>
+	  <arg name="view_cameras" value="$(arg view_cameras)"/>
+                 <arg name="exposure_time" value="5000"/>
      </include>
 
      <include file="$(find nist_cal)/launch/single_camera.launch" >
           <arg name="camera_number" value="7"/>
 	  <arg name="camera_id" value="21381787"/>
-	  <arg name="view_camera" value="$(arg view_camera)"/>
+	  <arg name="view_cameras" value="$(arg view_cameras)"/>
+                 <arg name="exposure_time" value="5000"/>
      </include>
 
 

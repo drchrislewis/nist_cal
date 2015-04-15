@@ -4,13 +4,14 @@
   <arg name="camera_id"/>
   <arg name="view_cameras" default="true"/>
   <arg name="acquisition_rate" default="2.0"/>
+  <arg name="exposure_time" default="20000.0"/>
 
   <!-- Basler camera node   -->
   <node pkg="camera_aravis" type="camnode" name="Basler$(arg camera_number)">
     <param name="guid" value="Basler-$(arg camera_id)"/>
     <param name="ExposureAuto" value="Off" /> 
-    <param name="GainAuto" value="Once" />
-    <param name="ExposureTimeAbs" value="10000.0" />
+    <param name="GainAuto" value="auto_off" />
+    <param name="ExposureTimeAbs" value="$(arg exposure_time)" />
     <param name="Gain" value="1.0" />
     <param name="AcquisitionFrameRate" value="$(arg acquisition_rate)" />
     <param name="frame_id" value="Basler$(arg camera_number)_optical_frame"/>

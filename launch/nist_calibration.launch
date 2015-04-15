@@ -4,6 +4,13 @@
     <!-- along with this file, launch: 1. moveit planning and execution, 2 moveit_rviz, 3. cameras -->
     <!-- after launching call the calibration service -->
     <!-- after calibration is complete, post process using  -->
+     <!--include file="$(find nist_cal)/launch/nist_cameras.launch" >
+          <arg name="view_cameras" value="true"/>
+     </include-->
+     <!--include file="$(find nist_cal)/launch/single_camera.launch" >
+          <arg name="camera_number" value="3"/>
+          <arg name="camera_id" value="21499591"/>
+     </include-->
 
     <!-- Launch service which when called will move robot and then indicate scene is ready   -->
     <node pkg="industrial_extrinsic_cal" type="ros_robot_trigger_action_service" name="rosRobotSceneTrigger" output="screen" />

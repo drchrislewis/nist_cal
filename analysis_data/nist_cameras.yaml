@@ -23,11 +23,13 @@ static_cameras:
     distortion_k3: 0.00
     distortion_p1: 0.00
     distortion_p2: 0.00
+    image_height: 1024
+    image_width: 1280
  -
-    camera_name: basler2
-    camera_optical_frame: basler2
+    camera_name: basler3
+    camera_optical_frame: basler3
     trigger: NO_WAIT_TRIGGER
-    image_topic: /Basler2/image_rect
+    image_topic: /Basler3/image_rect
     angle_axis_ax: 0.0
     angle_axis_ay: 0.0
     angle_axis_az: 0.0
@@ -45,28 +47,8 @@ static_cameras:
     distortion_k3: 0.00
     distortion_p1: 0.00
     distortion_p2: 0.00
- -
-    camera_name: basler3
-    camera_optical_frame: basler3
-    trigger: NO_WAIT_TRIGGER
-    image_topic: /Basler3/image_rect
-    angle_axis_ax: 0.0
-    angle_axis_ay: 0.0
-    angle_axis_az: 0.0
-    position_x: 0.0
-    position_y: 0.0
-    position_z: 0.0
-    transform_interface: ros_camera_scti
-    parent_frame: world_frame
-    focal_length_x: 2344.7
-    focal_length_y: 2330.6
-    center_x: 697.2
-    center_y: 404.3
-    distortion_k1: 0.00
-    distortion_k2: 0.00
-    distortion_k3: 0.00
-    distortion_p1: 0.00
-    distortion_p2: 0.00
+    image_height: 1024
+    image_width: 1280
  -
     camera_name: basler4
     camera_optical_frame: basler4
@@ -89,28 +71,8 @@ static_cameras:
     distortion_k3: 0.00
     distortion_p1: 0.00
     distortion_p2: 0.00
- -
-    camera_name: basler4
-    camera_optical_frame: basler4
-    trigger: NO_WAIT_TRIGGER
-    image_topic: /Basler4/image_rect
-    angle_axis_ax: 0.0
-    angle_axis_ay: 0.0
-    angle_axis_az: 0.0
-    position_x: 0.0
-    position_y: 0.0
-    position_z: 0.0
-    transform_interface: ros_camera_scti
-    parent_frame: world_frame
-    focal_length_x: 2890.9
-    focal_length_y: 2881.9
-    center_x: 996.08
-    center_y: 579.18
-    distortion_k1: 0.00
-    distortion_k2: 0.00
-    distortion_k3: 0.00
-    distortion_p1: 0.00
-    distortion_p2: 0.00
+    image_height: 1024
+    image_width: 1280
  -
     camera_name: basler5
     camera_optical_frame: basler5
@@ -133,6 +95,8 @@ static_cameras:
     distortion_k3: 0.00
     distortion_p1: 0.00
     distortion_p2: 0.00
+    image_height: 1086
+    image_width: 2046
  -
     camera_name: basler6
     camera_optical_frame: basler6
@@ -155,6 +119,8 @@ static_cameras:
     distortion_k3: 0.00
     distortion_p1: 0.00
     distortion_p2: 0.00
+    image_height: 1086
+    image_width: 2046
  -
     camera_name: basler7
     camera_optical_frame: basler7
@@ -177,3 +143,5 @@ static_cameras:
     distortion_k3: 0.00
     distortion_p1: 0.00
     distortion_p2: 0.00
+    image_height: 1086
+    image_width: 2046

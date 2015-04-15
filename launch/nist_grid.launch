@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<launch>
+
+     <!--include file="$(find nist_cal)/launch/nist_cameras.launch" >
+          <arg name="view_cameras" value="true"/>
+     </include-->
+
+    <!-- Launch service which when called will move robot and then indicate scene is ready   -->
+    <node pkg="industrial_extrinsic_cal" type="ros_robot_trigger_action_service" name="rosRobotSceneTrigger" output="screen" />
+
+    <!-- Launch the extrinsic calibration service -->
+    <node pkg="industrial_extrinsic_cal" type="service_node" name="calibration_service_node" output="screen" >
+       <param name="yaml_file_path" value="$(find nist_cal)/yaml/"/>
+       <rosparam>
+          camera_file: "nist_cameras.yaml"
+          target_file: "nist_targets.yaml"
+          cal_job_file: "caljob_single_ball.yaml"
+        </rosparam>
+    </node>
+
+</launch>

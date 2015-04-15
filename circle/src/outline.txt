@@ -1,0 +1,9 @@
+add to calibration_job.cpp
+     create a camera's file with cameras at solved locations
+     write target locations file, along with list of camera observation, point_id and u,v
+write new translator
+    read target_locations file, 
+    create a single list of points in one file
+    create a single list of observations in another file
+new proceesing
+    Instead of compute_observations, just read observations

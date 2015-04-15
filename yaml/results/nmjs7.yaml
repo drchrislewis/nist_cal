@@ -1,0 +1,54 @@
+true
+---
+This is a simple list of mutable joint states
+---
+true
+---
+each line has the form
+---
+true
+---
+"joint_name: <double_value>"
+---
+basler1_pitch_joint: -0.0986109566554845
+basler1_roll_joint: -2.12868878575874
+basler1_x_joint: -0.809084272843128
+basler1_y_joint: 0.818765989287375
+basler1_yaw_joint: -2.69445968556544
+basler1_z_joint: 0.78818917904401
+basler2_pitch_joint: 2.98339911802836e-14
+basler2_roll_joint: 3.13999999999997
+basler2_x_joint: 0.700000000000001
+basler2_y_joint: -9.09903967764251e-17
+basler2_yaw_joint: -1.57
+basler2_z_joint: 1.54
+basler3_pitch_joint: -0.0389002444870271
+basler3_roll_joint: -2.66623096437347
+basler3_x_joint: -1.26175212796303
+basler3_y_joint: 0.0668680211915606
+basler3_yaw_joint: -1.59764849261848
+basler3_z_joint: 1.50377385770997
+basler4_pitch_joint: -0.059758669604751
+basler4_roll_joint: -2.40045369168242
+basler4_x_joint: -0.735781426882145
+basler4_y_joint: -0.710157089298636
+basler4_yaw_joint: -0.74937522353035
+basler4_z_joint: 0.950485381218924
+basler5_pitch_joint: -0.0380323187971457
+basler5_roll_joint: -2.42873976795306
+basler5_x_joint: -0.895871447892679
+basler5_y_joint: -0.568175773682918
+basler5_yaw_joint: -0.745401774573469
+basler5_z_joint: 0.942094214951628
+basler6_pitch_joint: -0.0144415836910685
+basler6_roll_joint: -3.13725011227801
+basler6_x_joint: 0.0263343743343212
+basler6_y_joint: 0.611370602088258
+basler6_yaw_joint: 0.00239294942550338
+basler6_z_joint: 1.51221668131387
+basler7_pitch_joint: -0.00403511394998438
+basler7_roll_joint: -3.12768847936203
+basler7_x_joint: -0.659690489185668
+basler7_y_joint: -0.00995855507748681
+basler7_yaw_joint: 1.55482910442549
+basler7_z_joint: 1.51350834554292
