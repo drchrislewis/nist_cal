@@ -1,14 +1,9 @@
 <?xml version="1.0" ?>
 <launch>
 
-     <!--include file="$(find nist_cal)/launch/nist_cameras.launch" >
-          <arg name="view_cameras" value="true"/>
-     </include-->
-     <!--include file="$(find nist_cal)/launch/single_camera.launch" >
-          <arg name="camera_number" value="1"/>
-          <arg name="camera_id" value="21499591"/>
-     </include-->
-
+    <!-- along with this file, launch: 1. moveit planning and execution, 2 moveit_rviz, 3. cameras -->
+    <!-- after launching call the calibration service -->
+    <!-- after calibration is complete, post process using  -->
 
     <!-- Launch service which when called will move robot and then indicate scene is ready   -->
     <node pkg="industrial_extrinsic_cal" type="ros_robot_trigger_action_service" name="rosRobotSceneTrigger" output="screen" />
@@ -16,15 +11,11 @@
     <!-- Launch the extrinsic calibration service -->
     <node pkg="industrial_extrinsic_cal" type="service_node" name="calibration_service_node" output="screen" >
        <param name="yaml_file_path" value="$(find nist_cal)/yaml/"/>
-       <rosparam>
-          camera_file: "nist_cameras.yaml"
-          target_file: "nist_targets.yaml"
-          cal_job_file: "nist_caljob.yaml"
-          store_results_package_name: "industrial_extrinsic_cal"
-          store_results_file_name: "world_to_basler_tf_broadcaster.launch"
-        </rosparam>
+       <param name="camera_file" value="nist_cameras.yaml"/>
+       <param name="target_file" value="nist_targets.yaml"/>
+       <param name="cal_job_file" value="nist_caljob.yaml"/>
+       <param name="post_proc_on" value="true"/>
+       <param name="observation_data_file" value="$(find nist_cal)/data/observation_data.yaml"/>
     </node>
-
-    <!-- NOTE ONE STILL NEEDS TO CALL THE CALIBRATION SERVICE -->
 
 </launch>
